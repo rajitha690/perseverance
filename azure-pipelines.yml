@@ -5,7 +5,7 @@ stages:
   jobs:
   - job: Build
     pool:
-      name: test-pool
+      name: test pool
     steps:
     - task: Maven@4
       inputs:
