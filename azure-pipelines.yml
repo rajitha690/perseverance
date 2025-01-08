@@ -1,4 +1,16 @@
 #trigger:
+- task: Maven@4
+  inputs:
+    azureSubscription: 'Free Trial(2cdb0d88-48b8-4743-bc11-1e17d8622e79)'
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    allowBrokenSymlinks: false
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
 #- main
 stages:
 - stage: BuildandPublishArtifact
